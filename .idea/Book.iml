@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="koa-bodyparser-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-compose-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-compress-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-favicon-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-hbs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-json-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-mount-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-router-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="koa-static-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="mocha-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="mocha-phantomjs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="sequelize-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="sequelize-fixtures-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="Book node_modules" level="project" />
+  </component>
+</module>

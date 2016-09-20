@@ -1,0 +1,91 @@
+<% var dataParse = JSON.parse(data)%>
+<div class="col-md-12">
+<h4>Редактирование пользователя</h4>
+<form method="post">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="username">*Имя пользователя</label>
+            <input type="text" id="username" name="username" placeholder="Введите имя пользователя" class="form-control" value="<%=dataParse.data.name%>" required>
+        </div>
+        <div class="form-group">
+            <label for="nickname">*Никнейм</label>
+            <input type="text" id="nickname" name="nickname" placeholder="БАБАЙКА" value="<%=dataParse.data.nickname%>" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">*Email</label>
+            <input type="text" id="email" name="email" placeholder="example@example.com" value="<%=dataParse.data.email%>" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Введите пароль</label>
+            <input type="password" id="password" name="password" class="form-control">
+        </div>
+
+        <div class="row">
+            <div class="col-md-<%=(userId==1)?6:12%>">
+                <div class="form-group">
+                    <label for="role">Роль</label>
+                    <%if(dataParse){%>
+                    <select name="role" id="role" class="form-control">
+                        <%dataParse.roles.forEach(function (elem) {%>
+                        <option value=<%=elem.id%>><%=elem.name%></option>
+                        <%})%>
+                    </select>
+                    <%}%>
+                </div>
+            </div>
+            <% if (userId==1){%>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="parent">Принадлежит к</label>
+                    <%if(dataParse){%>
+                    <select name="parent" id="parent" class="form-control">
+                        <%dataParse.users.forEach(function (elem) {%>
+                        <option value=<%=elem.id%>><%=elem.nickname%></option>
+                        <%})%>
+                    </select>
+                    <%}%>
+                </div>
+            </div>
+            <%}%>
+        </div>
+
+
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="session_time">Время сессии (секунд)</label>
+            <input type="number" name="session_time" value="<%=dataParse.data.ttl%>" id="session_time" class="form-control">
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Если значение не установить - будет действовать значение по умолчанию 2592000 секунд (30 дней)
+        </div>
+        <div class="form-group">
+            <label for="afk_session">Время сессии при бездействии (секунд)</label>
+            <input type="number" name="afk_session" id="afk_session" value="<%=dataParse.data.afk%>" class="form-control">
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+            Если значение не установить - будет действовать значение по умолчанию 2592000 секунд (30 дней)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="submit" class="btn btn-success" value="Сохранить">
+        <a href="/users" class="btn btn-danger" data-dismiss="modal">Отмена</a>
+    </div>
+    <% if (msg){%>
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            <%msg.forEach((ms)=>{%>
+            <li class="item"><%=ms%></li>
+            <%})%>
+        </ul>
+    </div>
+    <%}%>
+</form>
+</div>
+
+<script>
+   $('select#role').select2().val(<%=dataParse.data.roleId%>)
+   $('select#parent').select2().val(<%=dataParse.data.ParentId%>)
+</script>

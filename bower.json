@@ -1,0 +1,22 @@
+{
+  "name": "books",
+  "description": "Book",
+  "main": "index.js",
+  "authors": [
+    "VT"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Books"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  },
+  "resolutions": {
+    "jquery": "~3.1.0"
+  }
+}

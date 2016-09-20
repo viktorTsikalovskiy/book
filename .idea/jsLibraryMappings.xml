@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{Book node_modules}" />
+    <file url="PROJECT" libraries="{koa-DefinitelyTyped, koa-bodyparser-DefinitelyTyped, koa-compose-DefinitelyTyped, koa-compress-DefinitelyTyped, koa-favicon-DefinitelyTyped, koa-hbs-DefinitelyTyped, koa-json-DefinitelyTyped, koa-mount-DefinitelyTyped, koa-router-DefinitelyTyped, koa-static-DefinitelyTyped, node-DefinitelyTyped, sequelize-DefinitelyTyped, sequelize-fixtures-DefinitelyTyped}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+    <includedPredefinedLibrary name="WebGL" />
+  </component>
+</project>
