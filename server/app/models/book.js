@@ -4,10 +4,7 @@ module.exports = function (sequelize, DataTypes) {
 
     var book = sequelize.define('books', {
         name: {
-            type: DataTypes.STRING,
-            unique:{
-                msg: "Книга с таким названием уже существует"
-            }
+            type: DataTypes.STRING
         },
         author: {
             type: DataTypes.STRING
